@@ -1,32 +1,33 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1e1b4b !important; /* Глубокий темно-синий цвет */
+    background-color: #350c81 !important; /* Твой новый главный фон */
 }
 
+/* Цвет заголовка в модальном окне */
 .c1 {
-    color: #702cef;
+    color: #e9d5ff; /* Светло-фиолетовый, чтобы текст читался на фоне окна */
 }
 
+/* Стиль для кнопки "Жауапты көру" */
 .b1 {
-    background-color: #702cef;
-    color: #fff;
+    background-color: #a78bfa; /* Светло-фиолетовая кнопка */
+    color: #2e0968; /* Темный текст для контраста */
     border: none;
+    font-weight: bold;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: background-color 0.2s, transform 0.2s;
 }
 
 .b1:hover {
-    background-color: #5a1c9c;
+    background-color: #c4b5fd; /* Чуть светлее при наведении */
+    color: #2e0968;
     transform: translateY(-2px);
 }
 
-.title-glow {
-    color: #702cef;
-    text-shadow: 0 0 10px rgba(84, 13, 190, 0.5);
-}
-
+/* Карточки команд */
 .team-card {
-    background-color: #3730a3;
+    background-color: #6d28d9; /* Насыщенный фиолетовый, чтобы выделялись */
+    color: white;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.2s;
 }
@@ -35,17 +36,19 @@ body {
     transform: scale(1.05);
 }
 
+/* Сетка вопросов */
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     max-width: 900px;
     margin: 0 auto;
 }
 
+/* Карточки с баллами */
 .question-cell {
-    background-color: #4f46e5;
-    color: #0e0e0e;
+    background-color: #8b5cf6; /* Приятный светло-фиолетовый цвет карточек */
+    color: #ffffff; /* Белый текст */
     font-size: 28px;
     font-weight: bold;
     height: 100px;
@@ -54,20 +57,28 @@ body {
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.1), 0 4px 6px rgba(0,0,0,0.3);
     transition: all 0.2s ease-in-out;
 }
 
 .question-cell:hover {
-    background-color: #4338ca;
+    background-color: #a78bfa; /* Карточка становится светлее при наведении */
     transform: scale(1.02);
-    box-shadow: inset 0 0 15px rgba(251, 191, 36, 0.3), 0 6px 10px rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3), 0 6px 10px rgba(0,0,0,0.4);
 }
 
+/* Сыгранные карточки */
 .question-cell.used {
-    background-color: #312e81;
-    color: transparent; /* Прячем баллы, если вопрос уже сыгран */
+    background-color: #230854; /* Цвет темнее главного фона, эффект "пустоты" */
+    color: transparent; 
     cursor: default;
     box-shadow: none;
-    pointer-events: none; /* Отключаем клики */
+    pointer-events: none; 
+}
+
+/* Дизайн для модального окна без черного цвета */
+.custom-modal {
+    background-color: #4c1d95; /* Глубокий, но не черный фиолетовый для фона окна */
+    border: 2px solid #8b5cf6; /* Светло-фиолетовая рамка */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Тень для объема */
 }
